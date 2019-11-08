@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Powers of 2</title>
+</head>
+<body>
+    <p>Powers of 2 from 0 to 31.</p>
+    <button type="button" class="button">Show it</button>
+    <div class="output"></div>
+
+    <script>
+        let btn = document.querySelector('.button');
+        let output = document.querySelector('.output');
+        function twoToPower(){
+            let result= '';
+            let calc;
+            for(let i = 0; i<=31; i++){
+                calc = Math.pow(2, i);
+                result += calc+ ', ';
+            }
+            output.innerHTML = result;
+        }
+        btn.onclick = twoToPower;
+    </script>
+</body>
+</html>

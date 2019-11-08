@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>5 x Table</title>
+</head>
+<body>
+    <p>Click on the button to see the 5x table.</p>
+    <button type="button" class="button">Show it</button>
+    <div class="output" id="button"></div>
+    <script>
+        let btn = document.querySelector(".button");
+        let output = document.querySelector('.output')
+        function fiveTimesTable(){
+            let result= "";
+            let calc;
+            let five = 5;
+            for(let i = 1; i<=12; i++){
+                calc = five * i;
+                result += "5 x " +i+ " = "+calc+"<br>";
+            }
+            output.innerHTML = result;
+        }
+        btn.onclick = fiveTimesTable;
+    </script>
+</body>
+</html>
